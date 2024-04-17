@@ -34,11 +34,14 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Mukta", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#app h1, #app h2, #app h3, #app h4{
+  margin-top: 0;
 }
 /* .nav-bar{
 
@@ -53,7 +56,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 1rem;
 }
 
@@ -83,7 +86,7 @@ export default {
 
 .nav-links li a:hover {
   font-size: 105%;
-  
+  animation: 0.5s ease;
 }
 
 </style>
