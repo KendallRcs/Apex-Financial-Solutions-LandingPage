@@ -1,15 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <!-- Coloca aquí la barra de navegación si la tienes -->
+    <!-- Por ejemplo, un menú de navegación -->
+    <nav class="nav-bar">
+      <router-link to="/">Inicio</router-link>
+      <router-link to="/nosotros">Nosotros</router-link>
+      <router-link to="/servicios">Servicios</router-link>
+      <router-link to="/contacto">Contacto</router-link>
+    </nav>
+  </header>
+  
+  <!-- El componente <router-view> se usará para renderizar los componentes de Vue según la ruta actual -->
+  <router-view></router-view>
+
+  <footer>
+    <!-- Coloca aquí el pie de página si lo tienes -->
+  </footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
@@ -22,5 +35,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.nav-bar{
+
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: aquamarine;
 }
 </style>
