@@ -1,7 +1,5 @@
 <template lang="">
-    <div>
-        <p>¡Bienvenido a la página de inicio!</p>
-    </div>
+    <p>AAA</p>
 </template>
 <script>
 export default {

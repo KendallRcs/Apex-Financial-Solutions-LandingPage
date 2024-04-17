@@ -3,10 +3,15 @@
     <!-- Coloca aquí la barra de navegación si la tienes -->
     <!-- Por ejemplo, un menú de navegación -->
     <nav class="nav-bar">
-      <router-link to="/">Inicio</router-link>
-      <router-link to="/nosotros">Nosotros</router-link>
-      <router-link to="/servicios">Servicios</router-link>
-      <router-link to="/contacto">Contacto</router-link>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><router-link to="/">Inicio</router-link></li>
+        <li><router-link to="/nosotros">Nosotros</router-link></li>
+        <li><router-link to="/servicios">Servicios</router-link></li>
+        <li><router-link to="/contacto">Contacto</router-link></li>
+      </ul>
     </nav>
   </header>
   
@@ -34,13 +39,51 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
-.nav-bar{
+/* .nav-bar{
 
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  background-color: aquamarine;
+  background-color: #729343;
+} */
+.nav-bar {
+  background-color: #729343; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
+
+.logo img {
+  height: 50px; 
+  width: auto;
+  margin: 5px; 
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.nav-links li {
+}
+
+.nav-links li a {
+  display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
+  color: white; /* Color del texto blanco */
+  text-align: center; /* Centra el texto */
+  padding: 14px 16px; /* Espaciado interior de los enlaces */
+  text-decoration: none; /* Quita la subrayado de los enlaces */
+}
+
+.nav-links li a:hover {
+  font-size: 105%;
+  
+}
+
 </style>
