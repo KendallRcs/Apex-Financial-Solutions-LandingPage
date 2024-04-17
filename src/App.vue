@@ -37,7 +37,6 @@ export default {
   font-family: "Mukta", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 #app h1, #app h2, #app h3, #app h4{
