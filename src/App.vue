@@ -40,7 +40,6 @@ export default {
   color: #2c3e50;
 }
 #app h1, #app h2, #app h3, #app h4{
-  margin-top: 0;
 }
 /* .nav-bar{
 
@@ -56,7 +55,7 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding: 1rem;
+  padding: .50rem;
 }
 
 .logo img {
@@ -86,6 +85,51 @@ export default {
 .nav-links li a:hover {
   font-size: 105%;
   animation: 0.5s ease;
+}
+
+/* GENERAL STYLES */
+.container {
+  width: 70%;
+  margin: auto;
+}
+.title{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  color: #729343
+}
+.sub-title{
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #729343
+}
+.button-transparent{
+  background-color: transparent;
+  color: #729343;
+  border: 3px solid #729343;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+}
+.button-big{
+  background-color: #729343;
+  color: white;
+  border: 3px solid #729343;
+  padding: 14px 25px;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 </style>
