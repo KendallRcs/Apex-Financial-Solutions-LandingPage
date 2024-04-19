@@ -1,0 +1,137 @@
+<template>
+  <div :class="[heroClass, 'hero']">
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-content-text">
+          <h1>
+            <span>{{ firstPart }}</span> <br>
+            <span>{{ secondPart }}</span>
+          </h1>
+          <p>{{ paragraph }}</p>
+          <router-link v-if="showButton" to="/contacto" class="buttonHero">Conócenos más</router-link>        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HeroComponent',
+  props: {
+    firstPart: {
+      type: String,
+      required: true
+    },
+    secondPart: {
+      type: String,
+      required: true
+    },
+    paragraph: {
+      type: String,
+      required: true
+    },
+    showButton: {
+      type: Boolean,
+      default: true
+    },
+    sectionTitle: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    heroClass() {
+      switch (this.sectionTitle) {
+        case 'Inicio':
+          return 'hero-inicio';
+        case 'Nosotros':
+          return 'hero-nosotros';
+        case 'Servicios':
+          return 'hero-servicios';
+        case 'Contacto':
+          return 'hero-contacto';
+        default:
+          return '';
+      }
+    }
+  }
+};
+</script>
+
+<style scoped>
+.hero{
+  position: relative;
+  height: 720px; /* Altura del hero */
+  width: 100%; /* Ancho del hero */
+  text-align: center;
+  color: white; /* Color del texto */
+  background-size: cover;
+  background-position: center;
+}
+/* Clase para la sección de Inicio */
+.hero-inicio {
+  background-image: url('../assets/INICIO.jpg'); /* Imagen de fondo para la sección de Inicio */
+}
+
+/* Clase para la sección de Nosotros */
+.hero-nosotros {
+ 
+  background-image: url('../assets/nosotros.jpg'); /* Imagen de fondo para la sección de Inicio */
+}
+
+/* Clase para la sección de Servicios */
+.hero-servicios {
+  background-image: url('../assets/nuestros_servicios.jpg'); /* Imagen de fondo para la sección de Inicio */
+}
+
+/* Clase para la sección de Contacto */
+.hero-contacto {
+  background-image: url('../assets/contactanos.jpg'); /* Imagen de fondo para la sección de Inicio */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.hero-content-text {
+  text-align: left; /* Alineación del texto */
+  padding: 20px;
+  color: white; /* Color del texto */
+  margin-top: 200px; /* Margen superior */
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.buttonHero {
+  background-color: rgba(0, 0, 0, 0);
+  color: white; /* Color del botón */
+  padding: 10px 40px;
+  font-size: 18px;
+  border: solid white 3px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  width: 200px; /* Ancho del botón */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.buttonHero:hover{
+  background-color: white;
+  color: #729343;
+  transition: all 0.3s ease;
+}
+</style>
