@@ -17,7 +17,7 @@
           <div class="menu-icon"></div>
         </div>
       </nav>
-      <ul class="nav-bar-responsive notVisible">
+      <ul v-motion-roll-visible-left class="nav-bar-responsive notVisible">
         <li><router-link to="/">Inicio</router-link></li>
         <li><router-link to="/nosotros">Nosotros</router-link></li>
         <li><router-link to="/servicios">Servicios</router-link></li>
@@ -84,7 +84,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* Asegura que esté siempre encima */
+  z-index: 997; /* Asegura que esté siempre encima */
   transition: background-color 0.3s ease, border-bottom 0.3 ease; /* Transición suave al cambiar el color de fondo */
   display: flex;
   justify-content: space-evenly; /* Ajuste a space-evenly */
@@ -269,15 +269,15 @@ p{
     }
 
     .nav-links-responsive {
+      margin: 0;
       position: fixed; /* Cambiar la posición a fixed */
       top: 0;
       left: 0;
-      width: 70%;
+      width: 50%;
       height: 100vh;
       background-color: #729343;
       z-index: 998;
       padding: 20px;
-      border-radius: 10px;
       color: #fff;
     }
     
