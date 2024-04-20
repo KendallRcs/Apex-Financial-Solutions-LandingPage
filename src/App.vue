@@ -85,7 +85,7 @@ export default {
   left: 0;
   width: 100%;
   z-index: 997; /* Asegura que esté siempre encima */
-  transition: background-color 0.3s ease, border-bottom 0.3 ease; /* Transición suave al cambiar el color de fondo */
+  transition: all 0.3s ease; /* Transición suave al cambiar el color de fondo */
   display: flex;
   justify-content: space-evenly; /* Ajuste a space-evenly */
 }
@@ -243,7 +243,9 @@ export default {
 p{
     text-align: justify
 }
-
+.notVisible{
+    display: none;
+  }
 /* RESPONSIVE */
 @media only screen and (max-width: 1000px) {
     /* Estilos específicos para pantallas con ancho máximo de 1000px */
@@ -264,9 +266,7 @@ p{
       display: none; /* Oculta los enlaces del menú por defecto en dispositivos móviles */
     }
 
-    .notVisible{
-      display: none;
-    }
+    
 
     .nav-links-responsive {
       margin: 0;
@@ -283,12 +283,15 @@ p{
     
 
     .nav-bar-responsive li {
+      display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
+    }
+    .nav-bar-responsive li a{
       margin-bottom: 10px;
       display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
-      color: white; /* Color del texto blanco */
       padding: 14px 16px; /* Espaciado interior de los enlaces */
       text-decoration: none; /* Quita la subrayado de los enlaces */
       transition: font-size 0.3s ease;
+      color: white; /* Color del texto blanco */
     }
 
     .menu-btn {
