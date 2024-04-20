@@ -8,7 +8,7 @@
     />
 
     <div id="contactForm">
-        <h1 class="title">Comunícate con nosotros</h1>
+        <h1 class="title" v-motion-slide-visible-top>Comunícate con nosotros</h1>
         <p class="contactForm-text">Escríbenos mediante el formulario para una atención personalizada y brindarte la información que desees.</p>
         <div class="contactForm-container container">
             <div class="contactForm-form">
@@ -21,7 +21,7 @@
 
                 <textarea rows=10  id="message" v-model="form.message" placeholder="Mensaje" required></textarea>
 
-                <button @click="onSubmit" class="button lg">Enviar</button>
+                <button @click="onSubmit" v-motion-fade-visible class="button lg">Enviar</button>
             </div>
         </div>
     </div>

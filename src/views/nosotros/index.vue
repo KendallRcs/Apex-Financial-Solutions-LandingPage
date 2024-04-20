@@ -8,34 +8,34 @@
     />
 
     <div id="ourGoal">
-        <h1 class="title">Nuestro Objetivo</h1>
+        <h1 class="title" v-motion-slide-visible-top>Nuestro Objetivo</h1>
         <div class="ourGoal-container container">
             <div class="left-side">
-                <p class="about-us-text">Nuestro objetivo es claro: impulsar el éxito de las empresas tecnológicas emergentes a través de asesoramiento financiero especializado y soluciones innovadoras. Nos esforzamos por ser el socio preferido y líder a nivel global, ofreciendo servicios de alta calidad basados en tres pilares fundamentales: experiencia especializada, atención al cliente y colaboración estratégica. En resumen, buscamos facilitar el crecimiento, la innovación y el éxito sostenible en un mercado dinámico y competitivo.</p>
+                <p class="about-us-text">Nuestro objetivo es claro: impulsar el éxito de las empresas tecnológicas emergentes a través de asesoramiento financiero especializado y soluciones innovadoras. Nos esforzamos por ser el socio preferido y líder a nivel global, ofreciendo servicios de alta calidad basados en tres pilares fundamentales: experiencia especializada, atención al cliente y colaboración estratégica.<br><br>En resumen, buscamos facilitar el crecimiento, la innovación y el éxito sostenible en un mercado dinámico y competitivo.</p>
             </div>
-            <img class="image-ourGoal" src="../../assets/objetivo.jpg" alt="Nosotros">
+            <img class="image-ourGoal" v-motion-fade-visible src="../../assets/objetivo.jpg" alt="Nosotros">
         </div>
     </div>
     <div id="misionVision">
         <div class="misionVision-container container">
             <div class="left-side">
-                <h1 class="title">Misión</h1>
-                <p class="misionVision-text">Nos dedicamos a ofrecer asesoramiento financiero especializado y soluciones vanguardistas para empresas tecnológicas emergentes. Nuestra meta es impulsar el crecimiento y la viabilidad de proyectos tecnológicos a través de estructuras financieras sólidas y estratégicas, permitiendo así el éxito duradero en un mercado dinámico y competitivo</p>
+                <h1 class="title" v-motion-slide-visible-top>Misión</h1>
+                <p class="misionVision-text">Nos dedicamos a ofrecer asesoramiento financiero especializado y soluciones vanguardistas para empresas tecnológicas emergentes.<br><br>Nuestra meta es impulsar el crecimiento y la viabilidad de proyectos tecnológicos a través de estructuras financieras sólidas y estratégicas, permitiendo así el éxito duradero en un mercado dinámico y competitivo</p>
             </div>
             <div class="middle">
                 <div class="vertical-line"></div>
             </div>
             <div class="right-side">
-                <h1 class="title">Visión</h1>
-                <p class="misionVision-text">Nuestra visión en Apex Financial Solutions es convertirnos en el socio preferido y líder en asesoramiento financiero para empresas tecnológicas a nivel global. Nos esforzamos por ser la opción principal para aquellos que buscan maximizar su potencial financiero y tecnológico, creando un impacto significativo en el mundo mediante la innovación y el crecimiento responsable</p>
+                <h1 class="title" v-motion-slide-visible-top>Visión</h1>
+                <p class="misionVision-text">Nuestra visión en Apex Financial Solutions es convertirnos en el socio preferido y líder en asesoramiento financiero para empresas tecnológicas a nivel global.<br><br>Nos esforzamos por ser la opción principal para aquellos que buscan maximizar su potencial financiero y tecnológico, creando un impacto significativo en el mundo mediante la innovación y el crecimiento responsable</p>
             </div>
         </div>
     </div>
 
     <div id="contactUs">
-        <h1 class="title">Comunícate con nosotros</h1>
+        <h1 class="title" v-motion-slide-visible-top>Comunícate con nosotros</h1>
         <div class="contactUs-container container">
-          <router-link to="/contacto"><button class="button-big">CONTÁCTANOS</button></router-link>
+          <router-link to="/contacto"><button class="button-big" v-motion-fade-visible>CONTÁCTANOS</button></router-link>
         </div>
     </div>
 
@@ -94,7 +94,7 @@ export default {
     }
 
     .misionVision-text{
-        text-align: center;
+        text-align: justify;
     }
     .vertical-line{
         border-left: 5px solid #729343;

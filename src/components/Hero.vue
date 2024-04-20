@@ -1,5 +1,5 @@
 <template>
-  <div :class="[heroClass, 'hero']">
+  <div v-motion-fade-visible :class="[heroClass, 'hero']">
     <div class="hero-content">
       <div class="container">
         <div class="hero-content-text">
@@ -7,7 +7,9 @@
             <span>{{ firstPart }}</span> <br>
             <span>{{ secondPart }}</span>
           </h1>
-          <p>{{ paragraph }}</p>
+          <p>{{ firstParagraph }}</p>
+          <p>{{ secondParagraph }}</p>
+          <br>
           <router-link v-if="showButton" to="/contacto" class="buttonHero">Conócenos más</router-link>        </div>
       </div>
     </div>
@@ -26,7 +28,11 @@ export default {
       type: String,
       required: true
     },
-    paragraph: {
+    firstParagraph: {
+      type: String,
+      required: true
+    },
+    secondParagraph: {
       type: String,
       required: true
     },
@@ -114,6 +120,8 @@ export default {
 .hero p {
   font-size: 18px;
   margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 6px;
 }
 
 .buttonHero {
@@ -127,11 +135,11 @@ export default {
   font-weight: bold;
   width: 200px; /* Ancho del botón */
   transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 .buttonHero:hover{
   background-color: white;
   color: #729343;
   transition: all 0.3s ease;
+
 }
 </style>

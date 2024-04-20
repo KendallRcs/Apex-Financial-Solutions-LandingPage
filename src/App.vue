@@ -56,13 +56,20 @@ export default {
   left: 0;
   width: 100%;
   z-index: 999; /* Asegura que esté siempre encima */
-  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+  transition: background-color 0.3s ease, border-bottom 0.3 ease; /* Transición suave al cambiar el color de fondo */
 }
-
+.router-link-active{
+  border-bottom: 4px solid #729343;
+}
 /* Estilos cuando se hace scroll */
 .scrolled .nav-bar {
   background: transparent;
   background-color: #729343; /* Color de fondo al hacer scroll */
+}
+.scrolled .nav-bar .router-link-active{
+  border-bottom: 4px solid white;
+
+
 }
 
 /* Estilos originales */
@@ -189,7 +196,9 @@ export default {
   font-weight: 700;
   transition: all 0.3s ease;
 }
-
+p{
+    text-align: justify
+  }
 /* ANIMATIONS */
 
 @keyframes appearFromBottom {
