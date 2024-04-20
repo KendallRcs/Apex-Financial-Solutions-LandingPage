@@ -1,22 +1,22 @@
 <template lang="">
     <footer id="footer">
-        <div class="footer-container container">
-            <div class="footer-container-information">
-                <img class="image-logo" src="../assets/kenrabbit.png" alt="Logo Completo">
-                <div class="right-side">
-                    <div class="information">
-                        <img src="../assets/phone.svg" alt="Ícono de teléfono" class="icon-img">
-                        <p class="phone-number">+51 954 054 500</p>
-                    </div>
-                    <div class="information">
-                        <img src="../assets/mail.svg" alt="Ícono de teléfono" class="icon-img">
-                        <p class="phone-number">jalvarez@apexcorp.pe</p>
-                    </div>
-                </div>
-            </div>
-            <hr class="line">
-            <p class="copy">©Copyright 2024, Todos los derechos reservados. Desarrollado por Apex Financial Solutions</p>
-        </div>
+      <div class="footer-container container">
+          <div class="footer-container-information">
+              <img class="image-logo" src="../assets/kenrabbit.png" alt="Logo Completo">
+              <div class="right-side">
+                  <div class="information">
+                      <img src="../assets/phone.svg" alt="Ícono de teléfono" class="icon-img">
+                      <p class="phone-number">+51 954 054 500</p>
+                  </div>
+                  <div class="information">
+                      <img src="../assets/mail.svg" alt="Ícono de teléfono" class="icon-img">
+                      <p class="phone-number">jalvarez@apexcorp.pe</p>
+                  </div>
+              </div>
+          </div>
+          <hr class="line">
+          <p class="copy">©Copyright 2024, Todos los derechos reservados. Desarrollado por Apex Financial Solutions</p>
+      </div>
     </footer>
 </template>
 <script>
@@ -64,4 +64,24 @@ export default {
     width: 90%; /* Ancho de la línea */
     margin: 1rem auto; 
   }
+
+  /* RESPONSIVE */
+@media only screen and (max-width: 1000px) {
+    /* Estilos específicos para pantallas con ancho máximo de 1000px */
+
+    #footer{
+      padding: 2rem 0;
+    }
+    .footer-container-information{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .copy {
+        text-align: center;
+    }
+
+    
+
+}
 </style>

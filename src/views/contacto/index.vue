@@ -110,4 +110,28 @@ export default {
         font-size: 1rem;
         font-family: "Mukta", sans-serif;
     }
+
+    /* RESPONSIVE */
+@media only screen and (max-width: 1000px) {
+    /* Estilos específicos para pantallas con ancho máximo de 1000px */
+
+    #contactForm{
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contactForm-text {
+        width: 90%; 
+        text-align: justify;
+    }
+
+    .contactForm-twoColumns{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 </style>

@@ -20,14 +20,14 @@
         <div class="misionVision-container container">
             <div class="left-side">
                 <h1 class="title" v-motion-slide-visible-top>Misión</h1>
-                <p class="misionVision-text">Nos dedicamos a ofrecer asesoramiento financiero especializado y soluciones vanguardistas para empresas tecnológicas emergentes.<br><br>Nuestra meta es impulsar el crecimiento y la viabilidad de proyectos tecnológicos a través de estructuras financieras sólidas y estratégicas, permitiendo así el éxito duradero en un mercado dinámico y competitivo</p>
+                <p class="misionVision-text">Nos dedicamos a ofrecer asesoramiento financiero especializado y soluciones vanguardistas para empresas tecnológicas emergentes.<br><br>Nuestra meta es impulsar el crecimiento y la viabilidad de proyectos tecnológicos a través de estructuras financieras sólidas y estratégicas, permitiendo así el éxito duradero en un mercado dinámico y competitivo.</p>
             </div>
             <div class="middle">
                 <div class="vertical-line"></div>
             </div>
             <div class="right-side">
                 <h1 class="title" v-motion-slide-visible-top>Visión</h1>
-                <p class="misionVision-text">Nuestra visión en Apex Financial Solutions es convertirnos en el socio preferido y líder en asesoramiento financiero para empresas tecnológicas a nivel global.<br><br>Nos esforzamos por ser la opción principal para aquellos que buscan maximizar su potencial financiero y tecnológico, creando un impacto significativo en el mundo mediante la innovación y el crecimiento responsable</p>
+                <p class="misionVision-text">Nuestra visión en Apex Financial Solutions es convertirnos en el socio preferido y líder en asesoramiento financiero para empresas tecnológicas a nivel global.<br><br>Nos esforzamos por ser la opción principal para aquellos que buscan maximizar su potencial financiero y tecnológico, creando un impacto significativo en el mundo mediante la innovación y el crecimiento responsable.</p>
             </div>
         </div>
     </div>
@@ -112,4 +112,52 @@ export default {
     align-items: center;
     gap: 2rem;
   }
+
+  /* RESPONSIVE */
+@media only screen and (max-width: 1000px) {
+    /* Estilos específicos para pantallas con ancho máximo de 1000px */
+
+    #ourGoal{
+        padding: 3rem 0;
+    }
+    .ourGoal-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+    }
+    #ourGoal .left-side{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-ourGoal{
+        width: 323px;
+        height: 242px;
+        object-fit: cover;
+        image-orientation: center;
+    }
+
+    #misionVision{
+        padding: 3rem 0;
+    }
+    .misionVision-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      gap: 0;
+    }
+    .vertical-line{
+        display: none;
+    }
+    #misionVision .left-side, #misionVision .right-side{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+}
 </style>

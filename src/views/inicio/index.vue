@@ -83,7 +83,7 @@
   }
   </script>
   
-  <style >
+  <style scoped>
 
 
 
@@ -96,6 +96,7 @@
   .services-container {
       display: flex;
       justify-content: space-evenly;
+      gap: 2rem;
       padding: 1rem;
   }
   
@@ -183,6 +184,47 @@
     gap: 2rem;
   }
 
-  
+  /* RESPONSIVE */
+  @media only screen and (max-width: 1000px) {
+    /* Estilos específicos para pantallas con ancho máximo de 1000px */
+
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .service .image-service img {
+      width: 244px;
+      height: 244px;
+      object-fit: cover;
+      image-orientation: center;
+  }
+
+  #aboutUs{
+    padding: 3rem 0;
+  }
+    .aboutUs-container{
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #aboutUs .left-side{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-aboutUs{
+    width: 244px;
+    height: 244px;
+    object-fit: cover;
+    image-orientation: center;
+  }
+ 
+
+}
   </style>
   

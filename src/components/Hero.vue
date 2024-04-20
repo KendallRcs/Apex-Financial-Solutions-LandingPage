@@ -4,11 +4,13 @@
       <div class="container">
         <div class="hero-content-text">
           <h1>
-            <span>{{ firstPart }}</span> <br>
-            <span>{{ secondPart }}</span>
+            <span class="hero-title1">{{ firstPart }}</span> <br>
+            <span class="hero-title2">{{ secondPart }}</span>
           </h1>
-          <p>{{ firstParagraph }}</p>
-          <p>{{ secondParagraph }}</p>
+          <div class="hero-paragraphs">
+            <p class="hero-paragraph1">{{ firstParagraph }}</p>
+            <p class="hero-paragraph2">{{ secondParagraph }}</p>
+          </div>
           <br>
           <router-link v-if="showButton" to="/contacto" class="buttonHero">Conócenos más</router-link>        </div>
       </div>
@@ -140,6 +142,25 @@ export default {
   background-color: white;
   color: #729343;
   transition: all 0.3s ease;
+
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1000px) {
+    /* Estilos específicos para pantallas con ancho máximo de 1000px */
+
+    
+    .hero-content {
+        height: auto; /* Altura automática en pantallas pequeñas */
+    }
+    .hero-paragraphs {
+      
+    }
+    .hero-paragraphs p{
+      line-height: 1.2;
+      margin: 0;
+
+    }
 
 }
 </style>

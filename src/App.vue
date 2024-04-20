@@ -198,17 +198,20 @@ export default {
 }
 p{
     text-align: justify
-  }
-/* ANIMATIONS */
+}
 
-@keyframes appearFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* RESPONSIVE */
+@media only screen and (max-width: 1000px) {
+    /* Estilos específicos para pantallas con ancho máximo de 1000px */
+
+    .container {
+        width: 97%; 
+    }
+
+    h1, h2{
+      line-height: 1.2;
+
+    }
+
 }
 </style>
