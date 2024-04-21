@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <header :class="{ 'scrolled': isScrolled }">
-      <!-- Coloca aquí la barra de navegación si la tienes -->
-      <!-- Por ejemplo, un menú de navegación -->
+      <!-- Barra de navegación -->
       <nav class="nav-bar">
         <div class="logo">
           <img src='./assets/logo.png' alt="Logo">
@@ -17,22 +16,25 @@
           <div class="menu-icon"></div>
         </div>
       </nav>
-      <ul v-motion-roll-visible-left class="nav-bar-responsive notVisible">
-        <li><router-link to="/">Inicio</router-link></li>
-        <li><router-link to="/nosotros">Nosotros</router-link></li>
-        <li><router-link to="/servicios">Servicios</router-link></li>
-        <li><router-link to="/contacto">Contacto</router-link></li>
+      <!-- Menú responsive -->
+      <ul  class="nav-links-responsive hidden">
+        <img @click="toggleMenu" src="./assets/iconx.svg" alt="Icono de X" class="icon-img">
+        <li><router-link to="/" @click="toggleMenu">Inicio</router-link></li>
+        <li><router-link to="/nosotros" @click="toggleMenu">Nosotros</router-link></li>
+        <li><router-link to="/servicios" @click="toggleMenu">Servicios</router-link></li>
+        <li><router-link to="/contacto" @click="toggleMenu">Contacto</router-link></li>
       </ul>
     </header>
     
-    <!-- El componente <router-view> se usará para renderizar los componentes de Vue según la ruta actual -->
+    <!-- Componente de Vue Router -->
     <router-view></router-view>
 
     <footer>
-      <!-- Coloca aquí el pie de página si lo tienes -->
+      <!-- Pie de página -->
     </footer>
   </div>
 </template>
+
 <script>
 export default {
   name: 'App',
@@ -53,58 +55,49 @@ export default {
       this.isScrolled = window.scrollY > 0;
     },
     toggleMenu() {
-      console.log("TOGGLE MENU")
-      const navMenu = document.querySelector('.nav-bar-responsive');
+      const navMenu = document.querySelector('.nav-links-responsive');
       if (navMenu) {
-        console.log("EXISTE NAV MENU", navMenu)
         if (!this.showMenu) {
           this.showMenu = !this.showMenu;
-          navMenu.classList.remove('notVisible');
-          navMenu.classList.add('nav-links-responsive');
-          console.log("ENTRO", navMenu)
-          console.log("SHOW MENU", this.showMenu)
+          navMenu.classList.remove('hidden');
         } else {
           this.showMenu = !this.showMenu;
-          navMenu.classList.remove('nav-links-responsive');
-          navMenu.classList.add('notVisible');
-          console.log("ENTRO 2", navMenu)
-          console.log("SHOW MENU", this.showMenu)
-
+          navMenu.classList.add('hidden');
         }
       }
     }
   }
 }
 </script>
+
 <style>
 /* Estilos del navbar */
 .nav-bar {
-  background-color: transparent; /* Fondo transparente por defecto */
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 997; /* Asegura que esté siempre encima */
-  transition: all 0.3s ease; /* Transición suave al cambiar el color de fondo */
+  z-index: 997;
+  transition: all 0.3s ease;
   display: flex;
-  justify-content: space-evenly; /* Ajuste a space-evenly */
+  justify-content: space-evenly;
 }
-.router-link-active{
+.router-link-active {
   border-bottom: 4px solid #729343;
+  font-weight: bold;
 }
 .menu-btn {
-  display: none; /* Oculta el botón de hamburguesa por defecto */
+  display: none;
   cursor: pointer;
   padding: 10px;
 }
-
 .menu-icon {
   width: 25px;
   height: 3px;
   background-color: white;
   transition: all 0.3s ease;
 }
-
 .menu-icon::before,
 .menu-icon::after {
   content: '';
@@ -114,24 +107,19 @@ export default {
   background-color: white;
   transition: all 0.3s ease;
 }
-
 .menu-icon::before {
   transform: translateY(-8px);
 }
-
 .menu-icon::after {
   transform: translateY(8px);
 }
-
-/* Estilos cuando se hace scroll */
 .scrolled .nav-bar {
   background: transparent;
-  background-color: #729343; /* Color de fondo al hacer scroll */
+  background-color: #729343;
 }
-.scrolled .nav-bar .router-link-active{
+.scrolled .nav-bar .router-link-active {
   border-bottom: 4px solid white;
 }
-
 /* Estilos originales */
 #app {
   font-family: "Mukta", sans-serif;
@@ -139,27 +127,28 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-#app h1, #app h2, #app h3, #app h4{
-}
+#app h1,
+#app h2,
+#app h3,
+#app h4 {}
 .logo img {
-  height: 50px; 
+  height: 50px;
   width: auto;
-  margin: 5px; 
+  margin: 5px;
 }
 .nav-links {
   display: flex;
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.nav-links li {
-}
+.nav-links li {}
 .nav-links li a {
-  display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
-  color: white; /* Color del texto blanco */
-  text-align: center; /* Centra el texto */
-  padding: 14px 16px; /* Espaciado interior de los enlaces */
-  text-decoration: none; /* Quita la subrayado de los enlaces */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   transition: font-size 0.3s ease;
 }
 .nav-links li a:hover {
@@ -183,7 +172,6 @@ export default {
   margin-bottom: 1rem;
   color: #729343;
 }
-
 .button {
   background-color: #729343;
   color: white;
@@ -240,111 +228,101 @@ export default {
   font-weight: 700;
   transition: all 0.3s ease;
 }
-p{
-    text-align: justify
+p {
+  text-align: justify;
 }
-.notVisible{
-    display: none;
-  }
+.hidden {
+  transform: translateX(-500px) !important;
+  transition: all 0.6s ease;
+}
 /* RESPONSIVE */
 @media only screen and (max-width: 1000px) {
-    /* Estilos específicos para pantallas con ancho máximo de 1000px */
-
-    .container {
-        width: 97%; 
-    }
-
-    h1, h2{
-      line-height: 1.2;
-    }
-
-    .menu-btn {
-      display: block; /* Muestra el botón de hamburguesa en dispositivos móviles */
-    }
-
-    .nav-links {
-      display: none; /* Oculta los enlaces del menú por defecto en dispositivos móviles */
-    }
-
-    
-
-    .nav-links-responsive {
-      margin: 0;
-      position: fixed; /* Cambiar la posición a fixed */
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100vh;
-      background-color: #729343;
-      z-index: 998;
-      padding: 20px;
-      color: #fff;
-    }
-    
-
-    .nav-bar-responsive li {
-      display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
-    }
-    .nav-bar-responsive li a{
-      margin-bottom: 10px;
-      display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
-      padding: 14px 16px; /* Espaciado interior de los enlaces */
-      text-decoration: none; /* Quita la subrayado de los enlaces */
-      transition: font-size 0.3s ease;
-      color: white; /* Color del texto blanco */
-    }
-
-    .menu-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .menu-icon {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      transition: all 0.3s ease;
-    }
-
-    .menu-icon::before,
-    .menu-icon::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      transition: all 0.3s ease;
-    }
-
-    .menu-icon::before {
-      transform: translateY(-8px);
-    }
-
-    .menu-icon::after {
-      transform: translateY(8px);
-    }
-
-    .show-menu .menu-icon {
-      background-color: transparent;
-    }
-
-    .show-menu .menu-icon::before {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .show-menu .menu-icon::after {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .show-menu .menu-icon::before,
-    .show-menu .menu-icon::after {
-      background-color: #fff;
-    }
-
-    .show-menu .nav-links-responsive {
-      display: block; /* Muestra los enlaces del menú cuando se activa */
-    }
+  .container {
+    width: 97%;
+  }
+  h1,
+  h2 {
+    line-height: 1.2;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links-responsive {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #729343;
+    z-index: 998;
+    padding: 20px;
+    color: #fff;
+    transition: all 0.6s ease;
+  }
+  .nav-links-responsive img {
+    height: 35px;
+    width: auto;
+    cursor: pointer;
+    margin-left: 80%;
+  }
+  .nav-links-responsive li {
+    display: block;
+  }
+  .nav-links-responsive li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+    color: white;
+    font-size: 25px;
+    font-weight: light;
+  }
+  .menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  .menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  .menu-icon::before,
+  .menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  .menu-icon::before {
+    transform: translateY(-8px);
+  }
+  .menu-icon::after {
+    transform: translateY(8px);
+  }
+  .show-menu .menu-icon {
+    background-color: transparent;
+  }
+  .show-menu .menu-icon::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .show-menu .menu-icon::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .show-menu .menu-icon::before,
+  .show-menu .menu-icon::after {
+    background-color: #fff;
+  }
+  .show-menu .nav-links-responsive {
+    display: block;
+  }
 }
 </style>
