@@ -28,6 +28,11 @@
     
     <!-- Componente de Vue Router -->
     <router-view></router-view>
+    <div class="floating-button">
+      <a href="https://api.whatsapp.com/send/?phone=%2B51954054500&text&type=phone_number&app_absent=0" target="_blank">
+        <img src="./assets/whatsappLogo.webp" alt="Botón de acción">
+      </a>
+    </div>
 
     <footer>
       <!-- Pie de página -->
@@ -56,13 +61,17 @@ export default {
     },
     toggleMenu() {
       const navMenu = document.querySelector('.nav-links-responsive');
-      if (navMenu) {
+      const navBar = document.querySelector('.nav-bar');
+      if (navMenu && navBar) {
         if (!this.showMenu) {
           this.showMenu = !this.showMenu;
           navMenu.classList.remove('hidden');
+          navBar.classList.add('hiddenUp');
         } else {
           this.showMenu = !this.showMenu;
           navMenu.classList.add('hidden');
+          navBar.classList.remove('hiddenUp');
+
         }
       }
     }
@@ -82,6 +91,7 @@ export default {
   transition: all 0.3s ease;
   display: flex;
   justify-content: space-evenly;
+  transition: all 0.6s ease;
 }
 .router-link-active {
   border-bottom: 4px solid #729343;
@@ -232,8 +242,42 @@ p {
   text-align: justify;
 }
 .hidden {
-  transform: translateX(-500px) !important;
+  transform: translateX(-1000px) !important;
   transition: all 0.6s ease;
+}
+.hiddenUp {
+  transform: translateY(-500px) !important;
+  transition: all 0.6s ease;
+}
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  width: 70px; /* Ancho y alto del botón */
+  height: 70px;
+  border-radius: 50%; /* Para hacer el botón circular */
+  background-color: #4ECC5C; /* Color de fondo del botón */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al botón */
+  transition: width 0.3s ease; /* Transición suave para el tamaño del botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.floating-button:hover {
+  bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.floating-button img {
+  width: 50px; /* Tamaño de la imagen */
+  height: auto;
+  border-radius: 50%; /* Ajuste para asegurar que la imagen sea circular */
+  margin-top: 7px
+}
+.nav-links-responsive {
+  display: none;
 }
 /* RESPONSIVE */
 @media only screen and (max-width: 1000px) {
@@ -250,7 +294,9 @@ p {
   .nav-links {
     display: none;
   }
+ 
   .nav-links-responsive {
+    display: block;
     margin: 0;
     position: fixed;
     top: 0;
@@ -323,6 +369,15 @@ p {
   }
   .show-menu .nav-links-responsive {
     display: block;
+  }
+
+  .floating-button {
+    width: 60px; /* Reduce el tamaño del botón en dispositivos móviles */
+    height: 60px;
+  }
+
+  .floating-button img {
+    width: 40px; /* Reduce el tamaño de la imagen en dispositivos móviles */
   }
 }
 </style>
