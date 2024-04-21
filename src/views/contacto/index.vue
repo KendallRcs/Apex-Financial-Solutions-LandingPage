@@ -13,13 +13,13 @@
         <div class="contactForm-container container">
             <div class="contactForm-form">
                 <div class="contactForm-twoColumns">
-                    <input type="text" id="name" v-model="form.name" placeholder="Nombre" required>
-                    <input type="tel" id="cellphone" v-model="form.cellphone" placeholder="Número de celular" required>
+                    <input type="text" id="name" v-model="form.Nombre" placeholder="Nombre" required>
+                    <input type="tel" id="cellphone" v-model="form.Celular" placeholder="Número de celular" required>
                 </div>
 
-                <input type="email" id="email" v-model="form.email" placeholder="E-mail" required>
+                <input type="email" id="email" v-model="form.Email" placeholder="E-mail" required>
 
-                <textarea rows=10  id="message" v-model="form.message" placeholder="Mensaje" required></textarea>
+                <textarea rows=10  id="message" v-model="form.Mensaje" placeholder="Mensaje" required></textarea>
 
                 <button @click="onSubmit" v-motion-fade-visible class="button lg">Enviar</button>
             </div>
@@ -43,37 +43,55 @@ export default {
     data(){
         return {
             form: {
-                name: '',
-                cellphone: '',
-                email: '',
-                message: ''
+                Nombre: '',
+                Celular: '',
+                Email: '',
+                Mensaje: ''
             }
         }
     },
     methods: {
-        onSubmit(){
+        async onSubmit(){
             console.log(this.form);
-            if(this.form.name === '' || this.form.cellphone === '' || this.form.email === '' || this.form.message === ''){
+            if(this.form.Nombre === '' || this.form.Celular === '' || this.form.Email === '' || this.form.Mensaje === ''){
                 toast.error("Por favor, complete todos los campos", {
                     autoClose: 3000,
                     position: toast.POSITION.TOP_CENTER,
                 } );
                 return;
             }else{
-                toast.success("Mensaje Enviado", {
-                    autoClose: 3000,
-                    position: toast.POSITION.TOP_CENTER,
-                } );
-                this.resetForm();
+                const response = await fetch("https://formspree.io/f/mnqelzar", {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+                },
+                body: JSON.stringify(this.form)
+                });
+
+                if (response.ok) {
+                    toast.success("Mensaje Enviado", {
+                        autoClose: 3000,
+                        position: toast.POSITION.TOP_CENTER,
+                    } );
+                    this.resetForm();
+                } else {
+                    // Maneja los errores si los hay
+                    toast.error("Hubo un problema al enviar tu formulario. Por favor, intenta nuevamente.", {
+                        autoClose: 3000,
+                        position: toast.POSITION.TOP_CENTER,
+                    } );
+                }
             }
+            
+            
         },
         resetForm(){
             this.form = {
-                name: '',
-                cellphone: '',
-                email: '',
-                message: ''
-            
+                Nombre: '',
+                Celular: '',
+                Email: '',
+                Mensaje: ''
             }
         }
     },
