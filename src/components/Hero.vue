@@ -148,8 +148,10 @@ export default {
 /* RESPONSIVE */
 @media only screen and (max-width: 1000px) {
     /* Estilos específicos para pantallas con ancho máximo de 1000px */
-
     
+    /* .hero{
+      height: 451px; 
+    } */
     .hero-content {
         height: auto; /* Altura automática en pantallas pequeñas */
     }
@@ -161,6 +163,14 @@ export default {
       margin: 0;
 
     }
+    .hero-inicio {
+      background-position: 45% center; /* Ajusta la posición de la imagen hacia la derecha */
+    }
 
+    /* Clase para la sección de Contacto */
+    .hero-contacto {
+      background-position: 75% center; /* Ajusta la posición de la imagen hacia la derecha */
+
+    }
 }
 </style>

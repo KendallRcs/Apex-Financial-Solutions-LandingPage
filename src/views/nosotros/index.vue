@@ -92,7 +92,10 @@ export default {
         grid-template-columns: 1fr 0 1fr;
         gap: 2rem;
     }
-
+    .left-side, .right-side{
+      display: flex;
+      flex-direction: column;
+    }
     .misionVision-text{
         text-align: justify;
     }

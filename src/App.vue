@@ -4,7 +4,7 @@
       <!-- Barra de navegación -->
       <nav class="nav-bar">
         <div class="logo">
-          <img src='./assets/logo.png' alt="Logo">
+          <img class="logo_image" src='./assets/logo_svg-10.svg' alt="Logo">
         </div>
         <ul class="nav-links">
           <li><router-link to="/">Inicio</router-link></li>
@@ -92,6 +92,8 @@ export default {
   display: flex;
   justify-content: space-evenly;
   transition: all 0.6s ease;
+  padding: .50rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
 }
 .router-link-active {
   border-bottom: 4px solid #729343;
@@ -101,6 +103,14 @@ export default {
   display: none;
   cursor: pointer;
   padding: 10px;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo_image{
+  height: 30px !important;
 }
 .menu-icon {
   width: 25px;

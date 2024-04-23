@@ -11,18 +11,18 @@
         <h1 class="title" v-motion-slide-visible-top>Comunícate con nosotros</h1>
         <p class="contactForm-text">Escríbenos mediante el formulario para una atención personalizada y brindarte la información que desees.</p>
         <div class="contactForm-container container">
-            <div class="contactForm-form">
+            <form ref="form"  @submit.prevent="onSubmit" class="contactForm-form">
                 <div class="contactForm-twoColumns">
-                    <input type="text" id="name" v-model="form.Nombre" placeholder="Nombre" required>
-                    <input type="tel" id="cellphone" v-model="form.Celular" placeholder="Número de celular" required>
+                    <input type="text" name="Nombre" id="Nombre" v-model="form.Nombre" placeholder="Nombre" required>
+                    <input type="tel" name="Celular" id="Celular" v-model="form.Celular" placeholder="Número de celular" required>
                 </div>
 
-                <input type="email" id="email" v-model="form.Email" placeholder="E-mail" required>
+                <input type="email" name="Email" id="Email" v-model="form.Email" placeholder="E-mail" required>
 
-                <textarea rows=10  id="message" v-model="form.Mensaje" placeholder="Mensaje" required></textarea>
+                <textarea rows=10 name="Mensaje" id="Mensaje" v-model="form.Mensaje" placeholder="Mensaje" required></textarea>
 
-                <button @click="onSubmit" v-motion-fade-visible class="button lg">Enviar</button>
-            </div>
+                <button type="submit" v-motion-fade-visible class="button lg">Enviar</button>
+            </form>
         </div>
     </div>
 
@@ -33,6 +33,7 @@
 import FooterComponent from "../../components/Footer.vue";
 import HeroComponent from "../../components/Hero.vue";
 import {toast} from 'vue3-toastify';
+import emailjs from '@emailjs/browser';
 
 export default {
     name: 'ContactoView',
@@ -60,7 +61,7 @@ export default {
                 } );
                 return;
             }else{
-                const response = await fetch("https://formspree.io/f/mnqelzar", {
+                /* const response = await fetch("https://formspree.io/f/mnqelzar", {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
@@ -81,7 +82,23 @@ export default {
                         autoClose: 3000,
                         position: toast.POSITION.TOP_CENTER,
                     } );
-                }
+                } */
+                emailjs.sendForm('service_d8ldbfv', 'template_76tjo5e', this.$refs.form, {publicKey: 'rzHMm3BziiHJs7uPs'}).then(
+                    () => {
+                        toast.success("Mensaje Enviado", {
+                        autoClose: 3000,
+                        position: toast.POSITION.TOP_CENTER,
+                        } );
+                        this.resetForm();
+                    },
+                    (error) => {
+                        // Maneja los errores si los hay
+                        toast.error(`Hubo un problema al enviar tu formulario. Por favor, intenta nuevamente. ${error}`, {
+                            autoClose: 3000,
+                            position: toast.POSITION.TOP_CENTER,
+                        } );
+                    },
+                );
             }
             
             

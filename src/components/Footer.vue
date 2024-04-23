@@ -1,8 +1,8 @@
 <template lang="">
     <footer id="footer">
-      <div class="footer-container container">
+      <div class=" container">
           <div class="footer-container-information">
-              <img class="image-logo" src="../assets/kenrabbit.png" alt="Logo Completo">
+              <img class="image-logo" src="../assets/logo_svg-09.png" alt="Logo Completo">
               <div class="right-side">
                   <div class="information">
                       <img src="../assets/phone.svg" alt="Ícono de teléfono" class="icon-img">
@@ -29,7 +29,7 @@ export default {
 
   #footer{
     background-color: #729343;
-    padding: 3rem;
+    padding: 1rem;
   }
   .information{
     display: flex;
@@ -48,8 +48,9 @@ export default {
   }
   .footer-container-information{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 2rem;
   }
   .right-side{
     display: flex;
@@ -64,7 +65,9 @@ export default {
     width: 90%; /* Ancho de la línea */
     margin: 1rem auto; 
   }
-
+  .image-logo{
+    height: 50px;
+  }
   /* RESPONSIVE */
 @media only screen and (max-width: 1000px) {
     /* Estilos específicos para pantallas con ancho máximo de 1000px */
