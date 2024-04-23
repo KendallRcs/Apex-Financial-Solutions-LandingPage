@@ -63,7 +63,7 @@ export default {
   .copy{
     color: white;
     width: 90%; /* Ancho de la línea */
-    margin: 1rem auto; 
+    margin: 1rem 2rem; 
   }
   .image-logo{
     height: 50px;
@@ -84,7 +84,10 @@ export default {
         text-align: center;
     }
 
-    
+    .image-logo{
+      width: 100%;
+      height: auto;
+    }
 
 }
 </style>

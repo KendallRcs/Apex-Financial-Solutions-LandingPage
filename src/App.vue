@@ -3,20 +3,22 @@
     <header :class="{ 'scrolled': isScrolled }">
       <!-- Barra de navegación -->
       <nav class="nav-bar">
-        <div class="logo">
-          <img class="logo_image" src='./assets/logo_svg-10.svg' alt="Logo">
-        </div>
-        <ul class="nav-links">
-          <li><router-link to="/">Inicio</router-link></li>
-          <li><router-link to="/nosotros">Nosotros</router-link></li>
-          <li><router-link to="/servicios">Servicios</router-link></li>
-          <li><router-link to="/contacto">Contacto</router-link></li>
-        </ul>
-        <div class="menu-btn" @click="toggleMenu">
-          <div class="menu-icon"></div>
+        <div class="nav-bar-content">
+          <div class="logo">
+            <img class="logo_image" src='./assets/logo_svg-10.svg' alt="Logo">
+          </div>
+          <ul class="nav-links">
+            <li><router-link to="/">Inicio</router-link></li>
+            <li><router-link to="/nosotros">Nosotros</router-link></li>
+            <li><router-link to="/servicios">Servicios</router-link></li>
+            <li><router-link to="/contacto">Contacto</router-link></li>
+          </ul>
+          <div class="menu-btn" @click="toggleMenu">
+            <div class="menu-icon"></div>
+          </div>
         </div>
       </nav>
-      <!-- Menú responsive -->
+        <!-- Menú responsive -->
       <ul  class="nav-links-responsive hidden">
         <img @click="toggleMenu" src="./assets/iconx.svg" alt="Icono de X" class="icon-img">
         <li><router-link to="/" @click="toggleMenu">Inicio</router-link></li>
@@ -90,10 +92,18 @@ export default {
   z-index: 997;
   transition: all 0.3s ease;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   transition: all 0.6s ease;
   padding: .50rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.nav-bar-content {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.6s ease;
+  width: 68%;
+  margin: 0 auto;
+
 }
 .router-link-active {
   border-bottom: 4px solid #729343;
@@ -103,6 +113,7 @@ export default {
   display: none;
   cursor: pointer;
   padding: 10px;
+  transition: all 0.3s ease;
 }
 .logo{
   display: flex;
@@ -299,12 +310,18 @@ p {
     line-height: 1.2;
   }
   .menu-btn {
-    display: block;
+    display: flex;
+  transition: all 0.3s ease;
+  z-index: 999;
+    justify-content: center;
+    align-items: center;
   }
   .nav-links {
     display: none;
   }
- 
+  .nav-bar-content {
+    width: 90%;
+  }
   .nav-links-responsive {
     display: block;
     margin: 0;
@@ -337,12 +354,7 @@ p {
     font-size: 25px;
     font-weight: light;
   }
-  .menu-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 999;
-  }
+  
   .menu-icon {
     width: 25px;
     height: 3px;
