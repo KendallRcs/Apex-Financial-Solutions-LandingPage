@@ -83,7 +83,7 @@ export default {
                         position: toast.POSITION.TOP_CENTER,
                     } );
                 } */
-                emailjs.sendForm('service_d8ldbfv', 'template_76tjo5e', this.$refs.form, {publicKey: 'rzHMm3BziiHJs7uPs'}).then(
+                emailjs.sendForm('service_etmfsy8', 'template_ims07in', this.$refs.form, {publicKey: 'oyehn_O3rjBV9lwut'}).then(
                     () => {
                         toast.success("Mensaje Enviado", {
                         autoClose: 3000,
