@@ -8,7 +8,7 @@
     />
 
     <div id="ourService1">
-        <h2 class="title" v-motion-slide-visible-top>Análisis de Eficiencia Operativa</h2>
+        <h2 class="title" v-motion-fade-visible>Análisis de Eficiencia Operativa</h2>
         <div class="ourServices-container container">
             <div class="left-side">
                 <p class="ourServices-text">Nuestro servicio de "Análisis de Eficiencia Operativa" proporciona una evaluación exhaustiva de los procesos financieros existentes, identificando áreas de oportunidad y posibles mejoras en el ciclo de conversión de flujo efectivo.<br><br>Con nuestras recomendaciones personalizadas, ayudamos a optimizar el flujo de efectivo, reducir costos operativos y mejorar la eficiencia en toda la organización.</p>
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div id="ourService2">
-        <h2 class="title" v-motion-slide-visible-top>Solución de Gestión de Capital</h2>
+        <h2 class="title" v-motion-fade-visible>Solución de Gestión de Capital</h2>
         <div class="ourServices-container container">
             <div class="left-side">
                 <p class="ourServices-text">Nuestro servicio de gestión integral de capital ofrece externalización de gestión de créditos, cobranzas y tesorería para empresas en busca de optimizar sus operaciones financieras y mejorar su flujo de efectivo. Con un enfoque completo, nuestro equipo experto administra eficientemente los procesos financieros, maximizando la rentabilidad y minimizando los riesgos para la empresa.<br><br>Confíe en nosotros para externalizar sus funciones financieras y alcanzar nuevos niveles de eficiencia y rentabilidad.</p>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div id="ourService3">
-        <h2 class="title" v-motion-slide-visible-top>Estructuración de financiamiento tecnológico</h2>
+        <h2 class="title" v-motion-fade-visible>Estructuración de financiamiento tecnológico</h2>
         <div class="ourServices-container container">
             <div class="left-side">
                 <p class="ourServices-text">Ofrecemos asesoramiento financiero especializado para proyectos tecnológicos, desde la concepción hasta la obtención de financiamiento con inversores adecuados.<br><br>Nuestro equipo experto colabora estrechamente con los clientes para diseñar estrategias financieras sólidas, comprometiéndose a brindar orientación experta y las herramientas necesarias para alcanzar el máximo potencial financiero de cada proyecto tecnológico.</p>
@@ -37,7 +37,7 @@
 
 
     <div id="contactUs">
-        <h1 class="title" v-motion-slide-visible-top>Comunícate con nosotros</h1>
+        <h1 class="title" v-motion-fade-visible>Comunícate con nosotros</h1>
         <div class="contactUs-container container">
           <router-link to="/contacto"><button class="button-big" v-motion-fade-visible>CONTÁCTANOS</button></router-link>
         </div>

@@ -8,7 +8,7 @@
     />
 
     <div id="contactForm">
-        <h1 class="title" v-motion-slide-visible-top>Comunícate con nosotros</h1>
+        <h1 class="title" v-motion-fade-visible>Comunícate con nosotros</h1>
         <p class="contactForm-text">Escríbenos mediante el formulario para una atención personalizada y brindarte la información que desees.</p>
         <div class="contactForm-container container">
             <form ref="form"  @submit.prevent="onSubmit" class="contactForm-form">

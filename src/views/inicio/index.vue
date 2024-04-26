@@ -8,7 +8,7 @@
       :showButton="true"
     />
     <div id="ourServices">
-        <h1 class="title" v-motion-slide-visible-top>Nuestros Servicios</h1>
+        <h1 class="title" v-motion-fade-visible>Nuestros Servicios</h1>
         <div class="services-container container">
           <div class="service" v-motion-slide-visible-bottom>
             <a href="/servicios" class="enlace-servicios">
@@ -47,7 +47,7 @@
     </div>
    
     <div id="aboutUs">
-        <h1 class="title" v-motion-slide-visible-top>Nosotros</h1>
+        <h1 class="title" v-motion-fade-visible>Nosotros</h1>
         <div class="aboutUs-container container">
             <div class="left-side">
                 <p class="about-us-text">En nuestra empresa, entendemos las necesidades financieras únicas de las empresas tecnológicas. <br><br>Nos especializamos en este sector y ofrecemos soluciones adaptadas a cada cliente. Nuestra red de contactos especializados y nuestra profunda comprensión del mercado tecnológico local nos permiten conectar a nuestros clientes con las mejores oportunidades financieras disponibles.</p>
@@ -57,7 +57,7 @@
         </div>
     </div>
     <div id="contactUs">
-        <h1 class="title" v-motion-slide-visible-top>Comunícate con nosotros</h1>
+        <h1 class="title" v-motion-fade-visible>Comunícate con nosotros</h1>
         <div class="contactUs-container container">
           <router-link to="/contacto"><button class="button-big" v-motion-fade-visible>CONTÁCTANOS</button></router-link>
         </div>
