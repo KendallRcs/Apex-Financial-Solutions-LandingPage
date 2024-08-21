@@ -43,6 +43,28 @@
             </a>
               <h2 class="sub-title">Estructuración de financiamiento tecnológico</h2>
           </div>
+          <div class="service" v-motion-slide-visible-bottom>
+            <a href="/servicios" class="enlace-servicios">
+              <div class="image-service">
+                <img src="../../assets/servicio_4.jpg" alt="Servicio 4 - Fusión y Adquisición Tecnológica">
+                <div class="overlay">
+                  Ver más
+                </div>
+              </div>
+            </a>
+              <h2 class="sub-title">Fusión y Adquisición Tecnológica</h2>
+          </div>
+          <div class="service" v-motion-slide-visible-bottom>
+            <a href="/servicios" class="enlace-servicios">
+              <div class="image-service">
+                <img src="../../assets/servicio_5.jpg" alt="Servicio 5 - Asesoría Corporativa de Negocios Complejos">
+                <div class="overlay">
+                  Ver más
+                </div>
+              </div>
+            </a>
+              <h2 class="sub-title">Asesoría Corporativa de Negocios Complejos</h2>
+          </div>
       </div>
     </div>
    
@@ -95,6 +117,7 @@
 
   .services-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-evenly;
       gap: 2rem;
       padding: 1rem;

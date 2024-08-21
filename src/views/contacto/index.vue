@@ -97,6 +97,7 @@ export default {
                             autoClose: 3000,
                             position: toast.POSITION.TOP_CENTER,
                         } );
+                        console.log("ERROR", error)
                     },
                 );
             }
