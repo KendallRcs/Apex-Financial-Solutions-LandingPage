@@ -39,8 +39,7 @@
         <div class="ourServices-container container">
             <div class="left-side">
                 <p class="ourServices-text">Ofrecemos servicios especializados de Fusión y Adquisición en el sector tecnológico, estructurando acuerdos que maximicen el valor y reduzcan riesgos para compradores y vendedores. Nos encargamos de identificar empresas objetivo y coordinar con asesores externos para asegurar una transición eficiente y exitosa.
-                  <br><br>Nuestro proceso incluye: Identificación y evaluación, Valuación, Due diligence, Negociación y cierre, e Integración. Confíe en nuestra experiencia y conocimiento del mercado tecnológico para una ejecución impecable y resultados óptimos.
-<b>(Propuesta Económica: 2% del monto de la Transacción + IGV)</b></p>
+                <br><br>Nuestro proceso incluye: Identificación y evaluación, Valuación, Due diligence, Negociación y cierre, e Integración. Confíe en nuestra experiencia y conocimiento del mercado tecnológico para una ejecución impecable y resultados óptimos. (Propuesta Económica: 2% del monto de la Transacción + IGV)</p>
             </div>
             <img class="image-ourServices" v-motion-fade-visible src="../../assets/servicio_4.jpg" alt="Servicio 4 - Fusión y Adquisición Tecnológica">
         </div>
@@ -49,8 +48,7 @@
         <h2 class="title" v-motion-fade-visible>Asesoría Corporativa de Negocios Complejos</h2>
         <div class="ourServices-container container">
             <div class="left-side">
-                <p class="ourServices-text">Ofrecemos asesoría integral para alinear sus documentos con sus objetivos empresariales. Nuestro equipo analiza cada contrato para garantizar el cumplimiento de normativas y estándares de la industria, proporcionando asesoramiento personalizado para identificar riesgos y oportunidades de mejora.<br><br>Nos especializamos en reflejar propuestas técnicas y económicas en los contratos, y en integrar los contratos de sus proveedores con su Usuario Final. Facilitamos la negociación con estrategias que favorecen sus intereses, asegurando el orden legal, minimizando riesgos y protegiendo sus derechos.
-                  <b>(Propuesta Económica: USD 1,500 + IGV)</b></p>
+                <p class="ourServices-text">Ofrecemos asesoría integral para alinear sus documentos con sus objetivos empresariales. Nuestro equipo analiza cada contrato para garantizar el cumplimiento de normativas y estándares de la industria, proporcionando asesoramiento personalizado para identificar riesgos y oportunidades de mejora.<br><br>Nos especializamos en reflejar propuestas técnicas y económicas en los contratos, y en integrar los contratos de sus proveedores con su Usuario Final. Facilitamos la negociación con estrategias que favorecen sus intereses, asegurando el orden legal, minimizando riesgos y protegiendo sus derechos. (Propuesta Económica: USD 1,500 + IGV)</p>
             </div>
             <img class="image-ourServices" v-motion-fade-visible src="../../assets/servicio_5.jpg" alt="Servicio 3 - Estructuración de financiamiento tecnológico">
         </div>
