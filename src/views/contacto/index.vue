@@ -100,6 +100,7 @@ export default {
                         console.log("ERROR", error)
                     },
                 );
+                emailjs.sendForm('service_etmfsy8', 'template_zlp6iwi', this.$refs.form, {publicKey: 'oyehn_O3rjBV9lwut'})
             }
             
             
