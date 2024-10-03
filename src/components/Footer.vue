@@ -6,11 +6,11 @@
               <div class="right-side">
                   <div class="information">
                       <img src="../assets/phone.svg" alt="Ícono de teléfono" class="icon-img">
-                      <p class="phone-number">+51 954 054 500</p>
+                      <p class="phone-number">+51 937 823 610 </p>
                   </div>
                   <div class="information">
                       <img src="../assets/mail.svg" alt="Ícono de teléfono" class="icon-img">
-                      <p class="phone-number">jalvarez@apexcorp.pe</p>
+                      <p class="phone-number">operaciones@apexcorp.pe</p>
                   </div>
               </div>
           </div>
