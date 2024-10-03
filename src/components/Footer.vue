@@ -6,7 +6,11 @@
               <div class="right-side">
                   <div class="information">
                       <img src="../assets/phone.svg" alt="Ícono de teléfono" class="icon-img">
-                      <p class="phone-number">+51 937 823 610 </p>
+                      <div style="display: flex; flex-direction: column;">
+                        <p class="phone-number" style="margin: 0; height:20px">+51 954 054 500</p>
+                        <p class="phone-number" style="margin: 0; height:20px">+51 937 823 610 </p>
+                      </div>
+
                   </div>
                   <div class="information">
                       <img src="../assets/mail.svg" alt="Ícono de teléfono" class="icon-img">
